@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Phone Review Form</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName" />
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="product">Product Name:</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+
+            <label for="installationDate">Date of Installation:</label>
+            <input type="date" id="installationDate" name="installationDate" required />
+
+            <fieldset>
+                <legend>Useful Features (Check all that apply):</legend>
+
+                <label for="feature1">
+                    <input type="checkbox" id="feature1" name="features" value="Long Battery Life" />
+                    Long Battery Life
+                </label><br />
+
+                <label for="feature2">
+                    <input type="checkbox" id="feature2" name="features" value="Compact Design" />
+                    Compact Design
+                </label><br />
+
+                <label for="feature3">
+                    <input type="checkbox" id="feature3" name="features" value="Fast Charging" />
+                    Fast Charging
+                </label><br />
+
+                <label for="feature4">
+                    <input type="checkbox" id="feature4" name="features" value="Wireless Connectivity" />
+                    Wireless Connectivity
+                </label><br />
+
+                <label for="feature5">
+                    <input type="checkbox" id="feature5" name="features" value="Water Resistant" />
+                    Water Resistant
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Overall Product Rating:</legend>
+
+                <label for="star1">1</label>
+                <input type="radio" id="star1" name="rating" value="1" required />
+
+                <label for="star2">2</label>
+                <input type="radio" id="star2" name="rating" value="2" required />
+
+                <label for="star3">3</label>
+                <input type="radio" id="star3" name="rating" value="3" required />
+
+                <label for="star4">4</label>
+                <input type="radio" id="star4" name="rating" value="4" required />
+
+                <label for="star5">5</label>
+                <input type="radio" id="star5" name="rating" value="5" required />
+            </fieldset>
+
+            <label for="writtenReview">Written Review:</label>
+            <textarea id="writtenReview" name="writtenReview" rows="5" cols="40"
+                placeholder="Share your experience with the product..."></textarea>
+
+            <input type="submit" value="Submit Review" />
+        </form>
+
+        <p id="reviewCount"></p>
+
+    </main>
+
+    <footer>
+        <hr />
+        <p>&copy; Brendan Cluff | WDD 130</p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
